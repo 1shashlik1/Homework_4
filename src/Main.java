@@ -25,11 +25,13 @@ public class Main {
         }
         //Задача№3
         short year = 2026;
-        boolean isLeap = ( year % 4 == 0 && year % 100 != 0 ) || ( year % 400 == 0 );
-        if ( isLeap ) {
-            System.out.println( year + " год - високосный" );
+        boolean isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        if (year > 1584) {
+            System.out.println(year + " год - старше 1584 года");
+        } if (isLeap) {
+            System.out.println(year + " год - високосный");
         } else {
-            System.out.println( year + " год - не високосный" );
+            System.out.println(year + " год - не високосный");
         }
         //Задача№4
         byte deliveryDistance = 101;
@@ -46,59 +48,47 @@ public class Main {
             System.out.println( "Свыше 100 км доставки нет." );
         }
         //Задача№5
-        char cizon;
         byte monthNumber = 1;
-        if ( monthNumber > 1 || monthNumber < 12 ) {
-            System.out.println("Некоректно.");
-        }
-        switch ( monthNumber ) {
+        switch (monthNumber) {
             case 1:
-                System.out.println( "2 Месяц." );
+                System.out.println("(Январь)Зима.");
                 break;
             case 2:
-                System.out.println( "3 Месяц." );
+                System.out.println("(Февраль)Зима.");
                 break;
             case 3:
-                System.out.println( "1 Месяц." );
+                System.out.println("(Март)Весна.");
                 break;
             case 4:
-                System.out.println( "2 Месяц." );
+                System.out.println("(Апрель)Весна.");
                 break;
             case 5:
-                System.out.println( "3 Месяц." );
+                System.out.println("(Май)Весна.");
                 break;
             case 6:
-                System.out.println( "1 Месяц." );
+                System.out.println("(Июнь)Лето.");
                 break;
             case 7:
-                System.out.println( "2 Месяц." );
+                System.out.println("(Июль)Лето.");
                 break;
             case 8:
-                System.out.println( "3 Месяц." );
+                System.out.println("(Август)Лето.");
                 break;
             case 9:
-                System.out.println( "1 Месяц." );
+                System.out.println("(Сентябрь)Осень.");
                 break;
             case 10:
-                System.out.println( "2 Месяц." );
+                System.out.println("(Октябрь)Осень.");
                 break;
             case 11:
-                System.out.println( "3 Месяц." );
+                System.out.println("(Ноябрь)Осень.");
                 break;
             case 12:
-                System.out.println( "1 Месяц." );
-        }
-        if ( monthNumber == 12 || monthNumber == 1 || monthNumber == 2 ) {
-            System.out.println("Зимы.");
-        }
-        if ( monthNumber == 3 || monthNumber == 4 || monthNumber == 5 ) {
-            System.out.println("Весны.");
-        }
-        if ( monthNumber == 6 || monthNumber == 7 || monthNumber == 8 ) {
-            System.out.println("Лета.");
-        }
-        if ( monthNumber == 9 || monthNumber == 10 || monthNumber == 11 ) {
-            System.out.println("Осени.");
+                System.out.println("(Декабрь)Зима.");
+                break;
+            default:
+                System.out.println("Некорректно.");//На названия месяцев не обращайте внимания, это я так, для себя.
+                //Так же я как понял когда вы говорили поменять 3 и 4 задаю вы имели в виду 3 и 5, так как к 4 задаче я не нашёл ни коментариев ни ошибок.
         }
     }
 }
